@@ -12,7 +12,7 @@ class Test:
 
     _subclass_registry = []
 
-    def __init_subclass__(subcls, *args, **kwargs):
+    def __init_subclass__(subcls, **kwargs):
         super().__init_subclass__(**kwargs)
         Test.__mk_testmethods_static(subcls)
 
